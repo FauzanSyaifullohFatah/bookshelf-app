@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookshelf App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script defer src="assets/js/main.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1><i class="fa fa-book" aria-hidden="true"></i> Bookshelf App</h1>
+    </header>
+    <main>
+      <section id="addNewBook">
+        <h2>Tambah Buku Baru</h2>
+        <form id="bookForm" data-testid="bookForm">
+          <div class="box-input">
+            <input id="bookFormTitle" type="text" required data-testid="bookFormTitleInput" class="focusInput"/>
+            <label for="bookFormTitle">Judul</label>
+          </div>
+          <div class="box-input">
+            <input id="bookFormAuthor" type="text" required data-testid="bookFormAuthorInput" class="focusInput"/>
+            <label for="bookFormAuthor">Penulis</label>
+          </div>
+          <div class="box-input">
+            <input id="bookFormYear" type="number" required data-testid="bookFormYearInput" class="focusInput"/>
+            <label for="bookFormYear">Tahun</label>
+          </div>
+          <div>
+            <label for="bookFormIsComplete">Selesai dibaca</label>
+            <input
+            id="bookFormIsComplete"
+            type="checkbox"
+            data-testid="bookFormIsCompleteCheckbox"
+            />
+          </div>
+          <button id="bookFormSubmit" type="submit" data-testid="bookFormSubmitButton">
+            Masukkan Buku ke rak <span>Belum selesai dibaca</span>
+          </button>
+        </form>
+        <button id="closeFormAdd"><i class="fa fa-chevron-left" aria-hidden="true"></i> Kembali</button>
+      </section>
+      <div class="book-action">
+        <section id="search-book">
+          <nav>
+            <h2><i class="fa fa-search" aria-hidden="true"></i> Cari Buku</h2>
+            <ul>
+              <li>
+                <a href="#" id="showAddBook"><i class="fa fa-plus-square" aria-hidden="true"></i> <span>Tambah Buku</span></a>
+              </li>
+              <li>
+                <a href="#" id="showIsunread"><i class="fa fa-clock-o" aria-hidden="true"></i></a>
+              </li>
+              <li>
+                <a href="#" id="showIsread"><i class="fa fa-check-square" aria-hidden="true"></i></a>
+              </li>
+            </ul>
+          </nav>
+          <form id="searchBook" data-testid="searchBookForm">
+            <label for="searchBookTitle">Judul</label>
+            <input id="searchBookTitle" type="text" data-testid="searchBookFormTitleInput" placeholder="Cari judul buku"/>
+            <button id="searchSubmit" type="submit" data-testid="searchBookFormSubmitButton">
+              Cari
+            </button>
+          </form>
+        </section>
+  
+        <div class="book-list">
+          <section id="isUnread">
+            <h2><i class="fa fa-clock-o" aria-hidden="true"></i> Belum selesai dibaca</h2>
+            <div id="incompleteBookList" data-testid="incompleteBookList"></div>
+          </section>
+          
+          <section id="isRead">
+            <h2><i class="fa fa-check-square" aria-hidden="true"></i> Selesai dibaca</h2>
+            <div id="completeBookList" data-testid="completeBookList">
+            </div>
+          </section>
+        </div>
+        <div class="boxAlert">
+          <div class="message">
+            <h2 id="alertTitle">Hapus?</h2>
+            <div class="information">
+              <div class="inp">
+                <label for="infoTitle">Judul</label>
+                <input type="text" id="infoTitle" disabled>
+              </div>
+              <div class="inp">
+                <label for="infoAuthor">Penulis</label>
+                <input type="text" id="infoAuthor" disabled>
+              </div>
+              <div class="inp">
+                <label for="infoYear">Tahun</label>
+                <input type="number" id="infoYear" disabled>
+              </div>
+            </div>
+            <div class="action">
+              <button>Tidak</button>
+              <button data-testid="bookItemDeleteButton">Hapus</button>
+              <button data-testid="bookItemEditButton">Update</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

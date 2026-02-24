@@ -1,0 +1,295 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    padding: 10px;
+    height: 100vh;
+}
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 0 10px #c8c8c8;
+    border-radius: 10px;
+    height: 10%;
+}
+main {
+    position: relative;
+    display: flex;
+    padding: 10px 0px;
+    gap: 10px;
+    height: 90%;
+    scroll-margin-bottom: 100px;
+}
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px #c8c8c8;
+    border-radius: 10px;
+    gap: 20px;
+    padding: 20px;
+}
+/* ---------->>>>> ADD NEW BOOK */
+#addNewBook {
+    height: 100%;
+    width: 400px;
+    background: #ffffff;
+}
+#closeFormAdd {
+    display: none;
+    padding: 5px;
+}
+#addNewBook h2 {
+    color: #2f2f2f;
+}
+#addNewBook form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px 0;
+}
+#addNewBook form .box-input {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#addNewBook form .box-input input {
+    padding-left: 10px;
+    height: 50px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 1px solid #2f2f2f;
+}
+#addNewBook form .box-input label {
+    position: absolute;
+    transition: all 0.5s;
+    color: #2f2f2f;
+    top: 15px;
+    left: 10px;
+}
+#addNewBook form .box-input input:focus {
+    border: 2px solid #ffffff;
+    outline: 2px solid #2f2f2f;
+}
+#addNewBook form button {
+    cursor: pointer;
+    background: #2f2f2f;
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 18px;
+}
+/* ---------->>>>> BOOK ACTION */
+.book-action {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    gap: 10px;
+}
+/* ---------->>>>> SEARCH BOOK */
+#search-book {
+    align-items: start;
+    width: 100%;
+    height: 20%;
+    
+}
+#search-book form {
+    display: flex;
+    width: 100%;
+}
+#search-book form label,
+#search-book form button {
+    padding: 5px;
+}
+#search-book form input {
+    width: 100%;
+    height: 30px;
+    max-width: 300px;
+    border: 1px solid #2f2f2f;
+    border-radius: 10px 0 0 10px;
+    padding-left: 5px;
+}
+#search-book form input:focus {
+    outline: none;
+}
+#search-book form button {
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+    background: #2f2f2f;
+    border: 1px solid #2f2f2f;
+    color: #ffffff;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 10px;
+}
+nav ul li a {
+    font-size: 25px;
+    text-decoration: none;
+    color: #2f2f2f;
+}
+nav ul li {
+    display: none;
+}
+/* ---------->>>>> BOOK LIST */
+.book-list {
+    display: flex;
+    gap: 10px;
+    height: 80%;
+}
+.book-list section {
+    position: relative;
+    justify-content: start;
+    width: 50%;
+    padding: 0;
+    gap: 0;
+}
+.book-list section h2 {
+    position: sticky;
+    top: 0;
+    background: #2f2f2f;
+    color: #ffffff;
+    border-radius: 8px 8px 0 0;
+    padding: 10px;
+    width: 100%;
+}
+.book-list section #incompleteBookList,
+.book-list section #completeBookList {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    overflow: auto;
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+}
+.book-list section #incompleteBookList .book-item,
+.book-list section #completeBookList .book-item {
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    box-shadow: 0 0 10px #c8c8c8;
+    border-radius: 10px;
+    padding: 10px;
+    gap: 10px;
+}
+.btn-action {
+    display: flex;
+    gap: 10px;
+}
+.btn-action button {
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    width: 100%;
+    padding: 5px;
+}
+.btn-action button:hover {
+    background: #2f2f2f;
+    color: #ffffff;
+}
+.boxAlert {
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    background: #2f2f2f7e;
+    border-radius: 10px;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.boxAlert .message {
+    background: #ffffff;
+    border: 1px solid #2f2f2f;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.boxAlert .message h2 {
+    color: #ffffff;
+    background: #2f2f2f;
+    text-align: center;
+    padding: 10px;
+}
+.information {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 5px;
+}
+.information .inp {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.information .inp label {
+    display: flex;
+    justify-content: space-between;
+    width: 70px;
+}
+.information .inp label::after {
+    content: ":";
+}
+.information .inp input {
+    padding-left: 5px;
+    width: 250px;
+    height: 30px;
+}
+.boxAlert .message .action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #2f2f2f;
+    padding: 10px;
+    gap: 10px;
+}
+.boxAlert .message .action button {
+    cursor: pointer;
+    border-radius: 10px;
+    width: 100%;
+    height: 30px;
+}
+
+@media only screen and (max-width: 1100px){
+    nav ul li:nth-child(1){
+        display: block;
+    }
+    #addNewBook {
+        display: none;
+    }
+    .book-action {
+        width: 100%;
+    }
+    #closeFormAdd {
+        display: block;
+    }
+}
+@media only screen and (max-width: 700px){
+    nav ul li:nth-child(2),
+    nav ul li:nth-child(3) {
+        display: block;
+    }
+    .book-list #isUnread {
+        width: 100%;
+    }
+    .book-list #isRead {
+        display: none;
+    }
+}
